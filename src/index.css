@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.home {
+    background-color: #9336B4;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem;
+    margin-left: 40rem;
+    display: flex;
+    justify-content: center
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: white;
+    font-weight: bolder;
+    margin-right: 22rem;
+}
+
+.time {
+    font-size: 2.5rem;
+    background-color: orange;
+    width: 17rem;
+    padding: 1.5rem;
+    box-shadow: 10rem 0 2rem #9336B4;
+}
+
+.options {
+    font-size: 2rem;
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+    color: white;
+}
+
+.options1 {
+    font-size: 2rem;
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+    color: white;
+    margin-left: 5rem;
+}
+
+.choice {
+    background-color: orange;
+    color: aliceblue;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.close {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.close-button {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.7rem;
+}
+
+.big-circle {
+    margin: 5.5rem 0 3.5rem 0;
+    width: 25rem;
+    height: 25rem;
+    background-color: orange;
+    border-radius: 50%;
+    border: 0.6rem solid black;
+}
+
+.small-circle {
+    width: 23rem;
+    height: 23rem;
+    background-color: #DD58D6;
+    border-radius: 50%;
+    border: 0.3rem solid black;
+    font-size: 5rem;
+    color: rgb(1, 1, 15);
+}
+
+.settings {
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: #9336B4;
+    border: 0;
+    font-size: 3rem;
+    position: absolute;
+    top: 8.5rem;
+    left: 18rem;
+}
+
+.settings-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 9rem;
+    top: 16rem;
+    color: white;
+}
+
+.duration {
+    display: flex;
+    gap: 3rem;
+}
+
+.submit {
+    margin-top: 2.5rem;
+    margin-left: 10rem;
+    height: 2rem;
+    width: 10rem;
+}
+
+.work-text {
+    margin-left: 3.8rem;
+}
+
+.titleDuration {
+    font-size: 2rem;
+    margin-bottom: 2rem
+}
