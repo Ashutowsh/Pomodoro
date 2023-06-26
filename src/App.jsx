@@ -15,10 +15,12 @@ function App() {
   };
   return (
     <div className="home center">
-      <Time />
-      <button className="settings" onClick={onSettingsOpen}>
-        ⚙️
-      </button>
+      <div className="title-container">
+        <button className="settings" onClick={onSettingsOpen}>
+          ⚙️
+        </button>
+        <Time />
+      </div>
       <Navbar />
       <Settings
         isSettingsOpen={isSettingsOpen}

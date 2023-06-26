@@ -16,11 +16,11 @@ html {
 
 .header {
     width: 100%;
-    padding: 1rem;
-    margin: 2rem;
-    margin-left: 40rem;
+    /* padding: 1rem;
+    margin: 2rem; */
     display: flex;
-    justify-content: center
+    justify-content: center;
+    gap: 8.5rem;
 }
 
 .center {
@@ -36,7 +36,7 @@ html {
     padding: 1rem;
     color: white;
     font-weight: bolder;
-    margin-right: 22rem;
+    margin-right: 2rem;
 }
 
 .time {
@@ -107,9 +107,6 @@ html {
     background-color: #9336B4;
     border: 0;
     font-size: 3rem;
-    position: absolute;
-    top: 8.5rem;
-    left: 18rem;
 }
 
 .settings-box {
@@ -142,4 +139,80 @@ html {
 .titleDuration {
     font-size: 2rem;
     margin-bottom: 2rem
+}
+
+.title-container {
+    display: flex;
+    gap: 15rem;
+    margin-bottom: 4.5rem;
+    margin-left: 6rem;
+}
+
+@media (min-width:319px) and (max-width:480px) {
+    .title {
+        font-size: 2.6rem;
+    }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .settings-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        inset: 0;
+        -webkit-backdrop-filter: saturate(200%) blur(10px);
+        backdrop-filter: saturate(200%) blur(10px);
+        z-index: 10;
+    }
+
+    .settings-box {
+        position: absolute;
+        left: 3.8rem;
+    }
+
+    .title-container {
+        gap: 2rem;
+        margin: 0 2rem 2rem 0;
+    }
+}
+
+@media (min-width:481px) and (max-width:1200px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .settings-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        inset: 0;
+        -webkit-backdrop-filter: saturate(200%) blur(10px);
+        backdrop-filter: saturate(200%) blur(10px);
+        z-index: 10;
+    }
+
+
+    .title-container {
+        gap: 8rem;
+        margin: 0 12rem 1.5rem 0;
+    }
 }
