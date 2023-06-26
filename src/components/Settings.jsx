@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { OptionContext } from "../context/SetOptions";
-function Settings({ isSettingsOpen, onSettingsClose }) {
+function Settings({ isSettingsOpen, onSettingsClose, children }) {
   const { setLongBreak, setShortBreak, setwork, apply } =
     useContext(OptionContext);
   return (

@@ -22,10 +22,13 @@ export const OptionContext = createContext({
   ShortBreak: null,
 });
 
+const audio = new Audio(sound);
+
 export const OptionProvider = ({ children }) => {
   const [colorWork, setColorWork] = useState("red");
   const [colorShortBreak, setColorShortBreak] = useState("orange");
   const [colorLongBreak, setColorLongBreak] = useState("orange");
+  const [isAudioPlaying, setIsAudioPlayin] = useState(false);
 
   const [work, setwork] = useState(30);
   const [ShortBreak, setShortBreak] = useState(5);
@@ -40,7 +43,10 @@ export const OptionProvider = ({ children }) => {
   );
 
   function playMusic() {
-    new Audio(sound).play();
+    if (!isAudioPlaying) {
+      audio.play();
+      setIsAudioPlayin(true);
+    }
   }
   const [pause, setPause] = useState(true);
   useEffect(() => {
@@ -48,12 +54,23 @@ export const OptionProvider = ({ children }) => {
       const interval = setInterval(() => {
         setTime((time) => time - 1);
       }, 1000);
+
       return () => clearInterval(interval);
     }
-    if (time === 0) {
+  }, [time, pause]);
+
+  useEffect(() => {
+    if (time <= 0) {
       playMusic();
     }
-  }, [time, pause]);
+  }, [time]);
+
+  useEffect(() => {
+    if (isAudioPlaying == true) {
+      audio.pause();
+      setIsAudioPlayin(false);
+    }
+  }, [pause]);
 
   const toggleClock = () => {
     setPause(!pause);
